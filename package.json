@@ -1,5 +1,5 @@
 {
-  "name": "default",
+  "name": "pikapuzzle",
   "version": "0.0.0",
   "private": true,
   "scripts": {
@@ -15,20 +15,21 @@
     "@types/react": "^18.2.55",
     "@types/react-dom": "^18.2.19",
     "@vitejs/plugin-react": "^4.2.1",
-    "vite": "^5.1.0",
     "eslint": "^8.56.0",
-    "eslint-plugin-react": "^7.33.2",
-    "eslint-plugin-react-hooks": "^4.6.0",
-    "eslint-plugin-react-refresh": "^0.4.5",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-import": "^2.29.1",
     "eslint-plugin-jsx-a11y": "^6.8.0",
-    "prettier": "3.2.5"
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.5",
+    "prettier": "3.2.5",
+    "vite": "^5.1.0"
   },
   "dependencies": {
+    "lodash": "^4.17.21",
+    "pokeapi-js-wrapper": "^1.2.3",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "lodash": "^4.17.21"
+    "react-dom": "^18.2.0"
   }
 }

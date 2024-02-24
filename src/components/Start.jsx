@@ -18,7 +18,7 @@ export default function Start({ onStart }) {
     <section
       id="start-menu"
       aria-label="start menu"
-      className={fadeAway && "fade-away"}
+      className={fadeAway ? "fade-away" : ""}
     >
       <div className="container-column">
         <img src={pikaPuzzleSVG} alt="PikaPuzzle logo" id="logo" />

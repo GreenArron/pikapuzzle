@@ -11,7 +11,7 @@ export default function Start({ onStart }) {
 
   if (fadeAway) {
     // dangerous, but we don't render Start after this
-    setTimeout(() => onStart(true), 300);
+    setTimeout(() => onStart(true), 500);
   }
 
   return (

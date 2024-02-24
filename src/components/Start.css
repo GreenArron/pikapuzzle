@@ -32,14 +32,20 @@ section#start-menu {
   transform: translateY(2px);
 }
 
-@keyframes slideup {
-  from {
-    transform: translate3d(0, 0, 0);
+@keyframes bouncyshrink {
+  20% {
+    transform: scale3d(0.9, 0.9, 0.9);
+  }
+
+  50%,
+  60% {
+    opacity: 1;
+    transform: scale3d(1.1, 1.1, 1.1);
   }
 
   to {
     visibility: hidden;
-    transform: translate3d(0, -140%, 0);
+    transform: scale3d(0.1, 0.1, 0.1);
   }
 }
 
@@ -56,5 +62,5 @@ section#start-menu {
 }
 
 #start-menu.fade-away #logo {
-  animation: 300ms ease-in 1 forwards slideup;
+  animation: 400ms ease-in 1 forwards bouncyshrink;
 }

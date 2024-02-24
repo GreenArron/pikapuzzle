@@ -1,0 +1,60 @@
+section#start-menu {
+  display: grid;
+  grid-template-rows: 3fr 4fr;
+  grid-template-columns: 1fr;
+  height: 100%;
+}
+
+#startbutton {
+  font-size: 2.5em;
+  font-family: "PokemonGB", system-ui, "Segoe UI", Ubuntu, sans-serif;
+
+  padding: 24px;
+  width: 6em;
+  height: 6em;
+  text-align: center;
+  border-radius: 70%;
+  border: none;
+  box-shadow: 0 2px 4px #311e1e;
+  background-color: var(--accent);
+  transition: 0.4s ease;
+  transition-property: background-color, box-shadow, transform, opacity;
+}
+
+#start-menu.fade-away #startbutton {
+  opacity: 0%;
+}
+
+#startbutton:active,
+#startbutton.activated {
+  background-color: var(--accent-vibrant);
+  box-shadow: 0 0 2px #311e1e;
+  transform: translateY(2px);
+}
+
+@keyframes slideup {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    visibility: hidden;
+    transform: translate3d(0, -140%, 0);
+  }
+}
+
+#start-menu #logo {
+  width: 36rem;
+  opacity: 100%;
+}
+
+#start-menu small {
+  transition: opacity 0.4s ease;
+}
+#start-menu.fade-away small {
+  opacity: 0%;
+}
+
+#start-menu.fade-away #logo {
+  animation: 300ms ease-in 1 forwards slideup;
+}

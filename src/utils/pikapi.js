@@ -2,6 +2,12 @@ import { Pokedex } from "pokeapi-js-wrapper";
 
 const Dex = new Pokedex({ timeout: 1000 * 60 * 2 });
 
+async function getRandomPokemonById(id) {
+  const pokemon = await Dex.getPokemonByName(id);
+  const pokemonSpecies = await Dex.getPokemonSpeciesByName(id);
+  return { ...pokemon, species: pokemonSpecies };
+}
+
 function getRandPokemonId(...exclude) {
   let randId;
   do {
@@ -12,7 +18,7 @@ function getRandPokemonId(...exclude) {
 
 async function getRandomPokemon(...exclude) {
   const randId = getRandPokemonId(...exclude);
-  return await Dex.getPokemonSpeciesByName(randId);
+  return await getRandomPokemonById(randId);
 }
 
 async function getRandomPokemons(n) {
@@ -22,9 +28,9 @@ async function getRandomPokemons(n) {
   for (let i = 0; i < n; i++) {
     currentRand = getRandPokemonId(rands);
     rands.push(currentRand);
-    pokemons.push(await Dex.getPokemonSpeciesByName(currentRand));
+    pokemons.push(await getRandomPokemonById(currentRand));
   }
   return pokemons;
 }
 
-export { getRandomPokemons, getRandomPokemon };
+export { getRandomPokemons, getRandomPokemon, Dex };

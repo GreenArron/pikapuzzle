@@ -1,0 +1,17 @@
+export default [
+  "monster",
+  "water1",
+  "bug",
+  "flying",
+  "ground",
+  "fairy",
+  "plant",
+  "humanshape",
+  "water3",
+  "mineral",
+  "indeterminate",
+  "water2",
+  "ditto",
+  "dragon",
+  "no-eggs",
+];

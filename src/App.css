@@ -20,13 +20,14 @@ body {
 }
 
 #root {
-  font-family: "PokemonGB", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  position: relative;
   max-width: 1366px;
   height: 100vh;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
 
+  font-family: "PokemonGB", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background: #fff url("/diagnal-lines_frompokemondotcom.png");
 
   display: flex;
@@ -40,6 +41,12 @@ body {
 
 #root:has(> #start-menu) {
   max-width: 100vw;
+}
+
+.highscore {
+  font-size: 0.75rem;
+  position: absolute;
+  top: 0;
 }
 
 .generic-container {

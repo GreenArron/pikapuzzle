@@ -64,3 +64,9 @@ section#start-menu {
 #start-menu.fade-away #logo {
   animation: 400ms ease-in 1 forwards bouncyshrink;
 }
+
+#start-menu .highscore {
+  position: static;
+  margin-top: 4rem;
+  font-size: 0.8rem;
+}

@@ -2,7 +2,7 @@ import "./Start.css";
 import { useState } from "react";
 import pikaPuzzleSVG from "/pikapuzzle.svg";
 
-export default function Start({ onStart }) {
+export default function Start({ onStart, highScore }) {
   const [fadeAway, setFadeAway] = useState(false);
   function handleStart(e) {
     e.target.classList.add("activated");
@@ -28,6 +28,9 @@ export default function Start({ onStart }) {
         <button id="startbutton" onClick={handleStart}>
           START
         </button>
+        {highScore === 0 || (
+          <div className="highscore">highscore: {highScore}</div>
+        )}
       </main>
     </section>
   );

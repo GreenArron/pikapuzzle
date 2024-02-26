@@ -9,10 +9,9 @@ import pokemonDexColors from "/src/stored/dexcolors";
 const NUM_OPTIONS = 4;
 
 function selectQuestion(score) {
-  // const numberOfQuestions = score < 7 ? 3 : 6;
+  const numberOfQuestions = score < 7 ? 3 : 6;
   // question 1 2 0 are the easier ones
   // so 3 4 5 unlock when score > 6
-  const numberOfQuestions = 6;
   return (score + 1) % numberOfQuestions;
 }
 

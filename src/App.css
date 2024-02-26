@@ -73,3 +73,9 @@ body {
   flex-direction: column;
   align-items: center;
 }
+
+@media screen and (width < 680px) {
+  #root {
+    background-color: hsl(0, 0%, 95%);
+  }
+}

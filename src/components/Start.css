@@ -70,3 +70,16 @@ section#start-menu {
   margin-top: 4rem;
   font-size: 0.8rem;
 }
+
+@media screen and (width < 680px) {
+  #start-menu #logo {
+    margin-top: 2rem;
+    width: 20rem;
+  }
+  #startbutton {
+    margin-top: 3rem;
+    font-size: 1.5rem;
+    width: 7em;
+    height: 7em;
+  }
+}

@@ -127,3 +127,22 @@ img.dead {
 .q-option.selected {
   filter: contrast(1.5) brightness(0.95);
 }
+
+@media screen and (width < 680px) {
+  .question-container {
+    flex-direction: column;
+  }
+  .question {
+    font-size: 1rem;
+  }
+  .q-option {
+    font-size: 1rem;
+    padding: 8px;
+  }
+  .quiz-pokemon img {
+    min-width: unset;
+    min-height: unset;
+    max-width: 180px;
+    max-height: 180px;
+  }
+}

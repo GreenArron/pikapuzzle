@@ -1,6 +1,7 @@
 :root {
-  --main-backdrop: #52525a;
-  --light-backdrop: #a6adb6;
+  --text-color: #52525a;
+  --background-color: hsl(278, 22%, 90%);
+  --background-color-transparent: hsla(278, 22%, 90%, 0.6);
   --primary: #f7e652;
   --primary-vibrant: #f7bd21;
   --accent: #e65a42;
@@ -11,7 +12,7 @@
   font-weight: 400;
 
   color-scheme: light dark;
-  color: var(--main-backdrop);
+  color: var(--text-color);
   background-color: #f1f1f1;
 
   font-synthesis: none;

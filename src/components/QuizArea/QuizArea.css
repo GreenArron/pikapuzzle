@@ -1,0 +1,123 @@
+.quiz-area {
+  min-height: 60vh;
+  max-width: calc(60rem + 10vw);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: center;
+  padding: 18px 24px;
+
+  font-size: 1.25rem;
+
+  --quiz-background: hsl(235, 30%, 96%);
+  background: var(--quiz-background);
+  box-shadow: 9px 10px 8px -7px rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+}
+
+.question-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+}
+
+.question {
+  word-wrap: break-word;
+  max-width: 22ch;
+}
+
+.quiz-pokemon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 34px 42px;
+
+  background-color: var(--quiz-background);
+  border: 2px solid hsla(0, 0%, 0%, 0.242);
+  border-radius: 8px;
+}
+
+.quiz-pokemon img {
+  min-width: 260px;
+  min-height: 220px;
+  max-width: 336px;
+  max-height: 320px;
+}
+
+img.loading {
+  background: no-repeat url("/rolling-load.svg");
+  background-size: 80%;
+  background-position: center;
+}
+
+img.dead {
+  background: no-repeat url("/emoticon-dead-outline.svg");
+  background-size: 40%;
+  background-position: 50% bottom;
+}
+
+.options-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.options {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.4rem;
+  min-width: 65%;
+  background-color: hsla(235, 50%, 43%, 0.2);
+  --border-radius: 18px;
+  border-radius: var(--border-radius);
+}
+
+.q-option:first-child {
+  border-radius: var(--border-radius) 0 0 var(--border-radius);
+}
+
+.q-option:last-child {
+  border-radius: 0 var(--border-radius) var(--border-radius) 0;
+}
+
+.q-option {
+  font-size: 1.75em;
+  padding: 12px;
+  border: none;
+  background-color: hsl(227, 32%, 70%);
+  transition: transform 50ms ease;
+  user-select: none;
+}
+
+.q-option:hover {
+  background-color: hsl(227, 32%, 70%, 0.3);
+}
+
+.q-option:active {
+  transform: scale(0.95);
+}
+
+.q-option.wrong {
+  background-color: hsl(0, 32%, 70%);
+  pointer-events: none;
+}
+
+.q-option.correct {
+  background-color: hsl(115, 32%, 70%);
+  pointer-events: none;
+}
+
+.q-option.correct:hover,
+.q-option.wrong:hover {
+  background-color: inherit;
+}
+
+.q-option.selected {
+  filter: contrast(1.5) brightness(0.95);
+}

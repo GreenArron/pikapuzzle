@@ -30,10 +30,9 @@ function LoadingImage({ src, alt }) {
   );
 }
 
-export default function QuizArea() {
+export default function QuizArea({ score, setScore }) {
   const [currentPokemon, setCurrentPokemon] = useState(null);
   const [currentQuestion, setCurrentQuestion] = useState(null);
-  const [score, setScore] = useState(0);
 
   function handleAnswer(index) {
     if (index === currentQuestion.correctIndex) {

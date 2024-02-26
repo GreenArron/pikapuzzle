@@ -42,6 +42,13 @@ body {
   max-width: 100vw;
 }
 
+.generic-container {
+  display: flex;
+  flex-direction: column;
+  min-width: 40rem;
+  gap: 0.5rem;
+}
+
 .font-pokemon {
   margin: 0;
   padding: 10px;

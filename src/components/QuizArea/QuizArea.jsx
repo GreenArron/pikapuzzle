@@ -39,7 +39,7 @@ export default function QuizArea() {
     if (index === currentQuestion.correctIndex) {
       setScore(score + 1);
     } else {
-      // lose
+      setScore(0);
     }
     setCurrentQuestion({ ...currentQuestion, answered: true, selected: index });
   }
@@ -59,14 +59,13 @@ export default function QuizArea() {
     }
   }, [currentPokemon, currentQuestion, score]);
 
-  if (
-    !!currentQuestion &&
-    currentQuestion.answered &&
-    currentQuestion.selected === currentQuestion.correctIndex
-  ) {
+  if (!!currentQuestion && currentQuestion.answered) {
     setTimeout(() => {
       setCurrentQuestion(null);
-      if (selectQuestion(score) === 1) {
+      if (
+        selectQuestion(score) === 1 ||
+        currentQuestion.selected !== currentQuestion.correctIndex
+      ) {
         setCurrentPokemon(null);
       }
     }, 400);

@@ -4,10 +4,10 @@ import Start from "./components/Start";
 import QuizArea from "./components/QuizArea/QuizArea";
 
 function App() {
-  const [started, setStarted] = useState(false);
+  const [gameState, setGameState] = useState(null);
 
-  if (!started) {
-    return <Start onStart={setStarted} />;
+  if (gameState === null) {
+    return <Start onStart={setGameState} />;
   }
   return <QuizArea />;
 }

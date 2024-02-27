@@ -22,7 +22,8 @@ function LoadingImage({ src, alt }) {
   return (
     <img
       src={src}
-      alt={alt}
+      alt={imgStatus === "loading" ? "" : alt}
+      aria-label={alt}
       onError={() => setImgStatus("dead")}
       onLoad={() => setImgStatus("loaded")}
       className={imgStatus}

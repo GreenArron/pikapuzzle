@@ -46,7 +46,6 @@ export default function QuizArea({ score, setScore }) {
   useEffect(() => {
     if (currentPokemon === null) {
       getRandomPokemon().then((randomPokemon) => {
-        console.log({ randomPokemon });
         setCurrentQuestion(generateQuestion(score, randomPokemon));
         setCurrentPokemon({
           ...randomPokemon,

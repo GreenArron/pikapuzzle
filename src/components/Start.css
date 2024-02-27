@@ -9,6 +9,7 @@ section#start-menu {
   font-size: 2.5em;
   font-family: "PokemonGB", system-ui, "Segoe UI", Ubuntu, sans-serif;
 
+  color: white;
   padding: 24px;
   width: 6em;
   height: 6em;

@@ -132,12 +132,21 @@ img.dead {
   .question-container {
     flex-direction: column;
   }
+  .quiz-area {
+    font-size: unset;
+    padding: 16px 8px;
+  }
   .question {
     font-size: 1rem;
   }
   .q-option {
     font-size: 1rem;
     padding: 8px;
+  }
+
+  .quiz-pokemon {
+    gap: 1rem;
+    padding: 24px 32px;
   }
   .quiz-pokemon img {
     min-width: unset;

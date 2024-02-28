@@ -88,28 +88,27 @@ export default function QuizArea({ score, setScore }) {
         </div>
         <div className="question">{currentQuestion.question}</div>
       </div>
-      <div className="options-container">
-        <div className="options">
-          {currentQuestion.options.map((optionString, index) => {
-            let markClass = "";
-            if (currentQuestion.answered) {
-              markClass =
-                index === currentQuestion.correctIndex ? "correct" : "wrong";
-              if (index === currentQuestion.selected) {
-                markClass += " selected";
-              }
+
+      <div className="options">
+        {currentQuestion.options.map((optionString, index) => {
+          let markClass = "";
+          if (currentQuestion.answered) {
+            markClass =
+              index === currentQuestion.correctIndex ? "correct" : "wrong";
+            if (index === currentQuestion.selected) {
+              markClass += " selected";
             }
-            return (
-              <Option
-                key={`${normalize(currentPokemon.id)}-${normalize(currentQuestion.question)}-${index}`}
-                mark={markClass}
-                onClick={() => handleAnswer(index)}
-              >
-                {optionString}
-              </Option>
-            );
-          })}
-        </div>
+          }
+          return (
+            <Option
+              key={`${normalize(currentPokemon.id)}-${normalize(currentQuestion.question)}-${index}`}
+              mark={markClass}
+              onClick={() => handleAnswer(index)}
+            >
+              {optionString}
+            </Option>
+          );
+        })}
       </div>
     </div>
   );

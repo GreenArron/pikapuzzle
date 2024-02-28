@@ -67,13 +67,6 @@ img.dead {
   background-position: 50% bottom;
 }
 
-.options-container {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .options {
   display: flex;
   justify-content: space-between;

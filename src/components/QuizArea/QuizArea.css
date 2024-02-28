@@ -129,14 +129,27 @@ img.dead {
   .quiz-area {
     font-size: unset;
     padding: 16px 8px;
+    min-width: 22rem;
   }
   .question {
-    font-size: 1rem;
+    font-size: 0.875rem;
+  }
+
+  .options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: unset;
+    max-width: 98vw;
   }
   .q-option {
-    font-size: 0.4375rem;
+    font-size: 0.75rem;
     letter-spacing: -1px;
     padding: 8px;
+    border-radius: var(--border-radius);
+  }
+  .q-option:first-child,
+  .q-option:last-child {
+    border-radius: inherit;
   }
 
   .quiz-pokemon {

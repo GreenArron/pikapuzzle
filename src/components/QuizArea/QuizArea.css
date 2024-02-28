@@ -135,7 +135,7 @@ img.dead {
   }
   .q-option {
     font-size: 0.4375rem;
-    letter-spacing: 0px;
+    letter-spacing: -1px;
     padding: 8px;
   }
 

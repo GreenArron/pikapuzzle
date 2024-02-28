@@ -43,7 +43,8 @@ body {
 }
 
 .highscore {
-  font-size: 0.75rem;
+  margin-top: 4px;
+  font-size: 0.875rem;
   position: absolute;
   top: 0;
 }
@@ -53,6 +54,16 @@ body {
   flex-direction: column;
   min-width: 40rem;
   gap: 0.5rem;
+}
+
+@media screen and (height < 600px) {
+  /* smaller desktop screens may be too small for highscore's position */
+  .generic-container {
+    margin-top: 2.625rem;
+  }
+  .highscore {
+    left: 10px;
+  }
 }
 
 .font-pokemon {

@@ -61,13 +61,13 @@ export default function QuizArea({ score, setScore }) {
   if (!!currentQuestion && currentQuestion.answered) {
     setTimeout(() => {
       setCurrentQuestion(null);
-      if (
-        selectQuestion(score) === 1 ||
-        currentQuestion.selected !== currentQuestion.correctIndex
-      ) {
+
+      const incorrectAnswer =
+        currentQuestion.selected !== currentQuestion.correctIndex;
+      if (selectQuestion(score) === 1 || incorrectAnswer) {
         setCurrentPokemon(null);
       }
-    }, 400);
+    }, 700);
   }
 
   if (!currentQuestion) {

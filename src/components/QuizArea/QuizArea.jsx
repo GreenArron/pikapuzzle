@@ -50,7 +50,7 @@ export default function QuizArea({ score, setScore }) {
         setCurrentQuestion(generateQuestion(score, randomPokemon));
         setCurrentPokemon({
           ...randomPokemon,
-          photo: `https://raw.githubusercontent.com/PokeAPI/sprites/showdown/sprites/pokemon/other/dream-world/${randomPokemon.id}.svg`,
+          photo: `https://raw.githubusercontent.com/PokeAPI/sprites/10a4d1cbb0e4d675d314eaa7afaff1d338c66e2e/sprites/pokemon/other/dream-world/${randomPokemon.id}.svg`,
         });
       });
     } else if (currentQuestion === null) {
